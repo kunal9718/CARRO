@@ -1,0 +1,164 @@
+const createheader = () => {
+    let head = document.querySelector('.header');
+
+    head.innerHTML = `
+
+    <header>
+    <nav class="headingcarro">
+   
+    <div id="mySidenav" class="sidenav">
+        <h2 class="salutation" style="color: cornsilk; text-align: center;">Hi, xyz</h2>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <nav class="sidenavlist">
+            <a href="myaccount.htm">My Account</a>
+            <a href="myorders.htm">My Orders</a>
+            <a href="cart.htm">My Cart</a>
+            <a href="contactus.htm">Contact Us</a>
+        </nav>
+        <a class="signout" href="#" style="color: cornsilk">Sign Out</a>
+    </div>
+
+    <span style="cursor:pointer ;margin-left:3%; font-size: xx-large; color: cornsilk;" onclick="openNav()">&#9776; </span>
+    <h1 class="mainname">
+    <a href="home.htm" id="carro"><i class="fa fa-shopping-cart cart_heading"></i>&nbsp;CARRO </a>
+</h1>
+<input type="search" placeholder="Search..." name="search" id="searchbar">
+<button type="submit" id="searchbutton"><i class="fa fa-search"></i></button>
+<button type="button" id="login">Login</button>
+<button type="button" onclick="window.location.href='cart.htm'"id="cartbutton"><i class="fa fa-shopping-cart cart_cart"></i>&nbsp;&nbsp;Cart</button>
+</nav>
+        <div class="menu_bg">
+            <nav class="menubar">
+                <ul>
+                    <li>
+                        <img class="mobilenavbar" src="grocerynavbar.png" alt="grocerynavbar"><br>
+                        <a href="grocery.htm">Grocery</a>
+                    </li>
+                    <li>
+                        <a href="mobile.htm"><img class="mobilenavbar" src="mobilenavbar.png" alt="mobilenavbar">
+                            <br>
+                            Mobiles</a>
+                    </li>
+                    <li>
+                        <img class="mobilenavbar" src="electronicsnavbar.png" alt="electronicsnavbar"><br>
+                        <a href="electronics.htm">Electronics</a>
+                    </li>
+                    <li>
+                    <img class="mobilenavbar" src="appliancesnavbar.png" alt="electronicsnavbar"><br>
+
+                    <a href="appliances.html">Appliances</a></li>
+                    <li>
+                    <img class="mobilenavbar" src="furniturenavbar.png" alt="electronicsnavbar"><br>
+                    <a href="furniture.html">Furniture</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div id="mylogin" class="mylogin">
+
+            <nav class="loginbox">
+                <span class="closelogin">&times;</span>
+                <br>
+                <img class="loginimage" src="login.png" alt="">
+                <h1>Have an account?</h1>
+                <br>
+                <form>
+                    <input class="login_username" type="text" size="25" maxlength="40"
+                        placeholder="Username or Mobile no." required />
+                    <label><br></label>
+                    <input class="login_password" type="password" size="25" maxlength="40" placeholder="Password"
+                        required />
+                    <br>
+                    <span class="forget_submit">
+                        <a href="#">Forgot password?</a></span>
+
+                    <input class="login_submit" type="submit" value="LOGIN">
+                    <br>
+                </form>
+                <button id="signup_submit"  >SIGNUP </button>
+                <br>
+            </nav>
+        </div>
+        <div id="mysignup" class="mysignup">
+            <nav class="signupbox">
+                <span class="closesignup">&times;</span><br>
+                <img class="loginimage" src="login.png" alt="">
+                <h1>Sign Up </h1>
+                <br>
+                <form>
+                    <input class="fname" type="text" size="25" maxlength="40" placeholder="First name" required />
+                    <input class="fname" type="text" size="25" maxlength="40" placeholder="Last name">
+                    <input class="fname" type="email" size="25" maxlength="40" placeholder="E-Mail Id" required />
+                    <input class="fname" type="password" size="25" maxlength="40" placeholder="password" required />
+                    <input class="fname" type="password" size="25" maxlength="40" placeholder="confirm password"
+                        required />
+                    <input class="new_submit" type="submit" value="Sign Up">
+                </form>
+                <button id="login2" >LOGIN</button><br>
+            </nav>
+        </div>
+</header>
+  
+
+    `;
+}
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+createheader();
+
+var modal = document.getElementById("mylogin");
+            var modal2 = document.getElementById("mysignup");
+
+
+            var btn_login = document.getElementById("login");
+            var btn_signup = document.getElementById("signup_submit");
+            var btn_login2 = document.getElementById("login2");
+
+
+            var exit_login = document.getElementsByClassName("closelogin")[0];
+            var exit_signup = document.getElementsByClassName("closesignup")[0];
+
+
+            btn_login.onclick = function () {
+                modal.style.display = "block";
+                modal2.style.display = "none";
+
+            }
+            btn_login2.onclick = function () {
+                modal.style.display = "block";
+                modal2.style.display = "none";
+
+            }
+            btn_signup.onclick = function () {
+                modal2.style.display = "block";
+                modal.style.display = "none";
+
+            }
+
+
+            exit_login.onclick = function () {
+                modal.style.display = "none";
+            }
+            exit_signup.onclick = function () {
+                modal2.style.display = "none";
+            }
+
+
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";                    
+                }
+                else if (event.target == modal2) {
+                    modal2.style.display = "none";                  
+                }
+            }

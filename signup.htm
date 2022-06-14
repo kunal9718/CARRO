@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+        h1 {
+            text-align: right;
+            color: black;
+            font-family: Okra,Helvetica;
+            text-align: center;
+        }
+        .loginimage{
+            display: block;
+            margin: auto;
+            height: 100px;
+            padding-bottom: 5px; 
+        }
+        h3 {
+            text-align: center;
+        }
+        .fname {
+            
+            display: block;
+            margin: auto;
+            border: none  ;
+            border-radius: 4px;
+            font-size: large;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            background-color: #ccc;
+            color: #666;
+            margin-bottom: 1%;
+        }
+        .new_submit {
+            display: block;
+            margin: auto;
+            background-color: #666;
+            padding: 12px 20px;
+            font-size:large;
+            font-weight: 600;
+            color: #ccc;
+            border-radius: 3px;
+            border: none  ;
+            box-shadow: none;
+            width: 50%;
+            margin-top: 14px;
+        }
+        .signupbox {
+            display: block;
+            margin: auto;
+            width: 30%;
+            border: solid 2px #666;
+            box-shadow:4px 4px 25px 8px #667;
+            margin-bottom: 5%;
+            border-radius: 20%;
+        }
+        .createnewaccount {
+            padding-top: 12%;
+        }
+    </style>
+
+</head>
+
+<body >
+    <nav class="header"></nav>
+    <script src="heading.js"></script>
+    
+
+    <div class="createnewaccount">
+        <nav class="signupbox"><br>
+        <img class="loginimage" src="login.png" alt="">
+    <h1>Sign Up </h1>
+     <br>
+    
+
+
+    <form>
+        <input class="fname" type="text" size="25" maxlength="40" placeholder="First name" required/>
+        <input class="fname" type="text" size="25" maxlength="40" placeholder="Last name" >
+        
+        <input class="fname" type="email" size="25" maxlength="40" placeholder="E-Mail Id" required/>
+        
+        <input class="fname" type="password" size="25" maxlength="40" placeholder="password" required/>
+        
+        <input class="fname" type="password" size="25" maxlength="40" placeholder="confirm password" required/>
+
+        
+                <input class="new_submit" type="submit" value="Sign Up">
+
+    </form>
+    <input class="new_submit" type="submit" value="Login" onclick="login()"><br>
+    </nav>
+    </div>
+    <nav class="footer"></nav>
+    <script src="footer.js"></script>
+    <script>
+        function login() {
+            window.location.href = "login.htm";
+
+        }
+
+    </script>
+</body>
+
+</html>

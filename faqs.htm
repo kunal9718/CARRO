@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ's</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        body{
+    font-family: 'Work Sans', sans-serif;
+}
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 120px;
+    padding-top: 12%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding: 20px;
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 50%; 
+   padding: auto;
+   
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: inherit;
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+    </style>
+
+
+
+</head>
+<body>
+    <nav class="header"></nav>
+    <script src="heading.js"></script>
+    <main>
+        <h1 class="faq-heading">Carro's Help Center | 24x7 Customer Care Support</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">Why do I see different prices for the same product?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>You could see different prices for the same product, as it could be listed by many Sellers.</p>
+                </div><br>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">Is installation offered for all products?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Installation and demo are offered for certain items by sellers through the brand or an authorised service provider. Please check the individual product page to see if these services are offered for the item.</p>
+                </div><br>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+<h1 class="faq-page">Is it necessary to have an account to shop on Carro?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Yes, it's necessary to log into your Carro account to shop. Shopping as a logged-in user is fast & convenient and also provides extra security.
+
+                        You'll have access to a personalised shopping experience including recommendations and quicker check-out.</p><br>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+                /* Toggle between hiding and showing the active panel */
+                var body = this.nextElementSibling;
+                if (body.style.display === "block") {
+                    body.style.display = "none";
+                } else {
+                    body.style.display = "block";
+                }
+            });
+        }
+        </script>
+    <script src="main.js"></script>
+    <nav class="footer"></nav>
+  <script src="footer.js"></script>
+</body>
+</html>

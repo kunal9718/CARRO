@@ -1,0 +1,93 @@
+
+
+
+
+        .foot{
+            font-family: Roboto,Arial,sans-serif;
+            background-color: #00a499;
+            color: rgb(192, 204, 216);
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            
+        }
+
+        .foot ul {
+          margin-bottom: 10px;
+        }
+        .footer{
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+            width: 100%;
+        }
+        .footflex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: space-around;
+            width: 100%;
+        }
+        
+        /* Popup container - can be anything you want */
+        .popup {
+          position:relative;
+          display: inline-block;
+          cursor: pointer;
+          color: white;
+          text-decoration: none;
+          list-style-type: none;
+          width: 100%;
+          
+        }
+        
+        /* The actual popup */
+        .popup .popuptext {
+          visibility: hidden;
+          width: 160px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 8px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -80px;
+        }
+        
+        /* Popup arrow */
+        .popup .popuptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+          visibility: visible;
+          
+          animation: fadeIn 1s;
+        }
+                
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity:1 ;}
+        }
+
+
+        .copyright {
+          display: block;
+          height: auto;
+          background-color: #02615b;;
+
+        }
+        
+
+        

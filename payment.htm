@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+        .container {
+            padding: 5px 20px 15px 20px;
+            border: 2px solid lightgray;
+            border-radius: 5px;
+            padding-top: 12%;
+        }
+
+        /* input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+        } */
+
+
+        .main-heading {
+            text-align: center;
+        }
+
+        .cod input[type="submit"] {
+            background-color: #4daea1;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .cod input[type="submit"]:hover {
+            background-color: #4caf84;
+        }
+
+        .cash {
+            font-size: xx-large;
+
+        }
+
+        .address {
+            width: 88%;
+            height: 250px;
+            margin-top: 3%;
+            margin-left: 5%;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid lightgray;
+            border-radius: 5px;
+        }
+
+        .mainaddress {
+            width: 80%;
+            height: 120px;
+            margin-left: 9%;
+            margin-top: 2%;
+            padding: 5px;
+            border: 2px solid lightgray;
+            border-radius: 5px;
+        }
+
+        .cod {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="header"></nav>
+    <script src="heading.js"></script>
+    <div class="container">
+        <form action="" onsubmit="placedorder()">
+            <h1 class="main-heading">PAYMENT FORM</h1>
+            <h2>CONTACT INFORMATION</h2>
+            <div class="address">
+                <nav class="mainaddress">
+                    <br>
+                    <h3>yaha address aaega</h3>
+
+                </nav>
+                <nav class="addaddress">
+                    <h4 style="color: rgb(83, 83, 83);">OR</h4>
+                    <h3><a href="add_address.htm">Add new Address</a></h3>
+                </nav>
+
+
+
+
+            </div>
+            <br>
+
+            <hr>
+
+            <h1>PAYMENT INFORMATION</h1>
+            <!-- <div class="savedcard">
+            <input type="radio">Saved cards
+
+            
+            </div>
+            <br>
+
+            <div class="newcard">
+            <input type="radio">Proceed by New Card :
+                <p>Card Type:
+                    <select name="card_type" id="card_type">
+                        <option value="">--Select Your Card--</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Master Card">Master Card</option>
+                        <option value="RuPay">RuPay</option>
+                    </select>
+                    Card Number: <input type="number" name="Card_Number" id="Card_Number" size="12">
+                </p>
+                <p>
+                    Exp Date: <input type="date" name="exp_date" id="exp_date">
+                    CVV: <input type="password" name="cvv" id="cvv">
+                </p>
+            </div> -->
+
+            
+            <div class="cod">
+                <input type="radio"><span class="cash">&nbsp;Cash On Delivery </span>
+            </div>
+
+
+            <div class="cod">
+                <input type="submit" value="PLace Order">
+            </div>
+
+    </div>
+
+
+    <script>
+        function placedorder() {
+            window.location.href = "myorders.htm";
+            alert("Your Order Has Been Placed");
+            
+            
+        }
+    </script>
+    <nav class="footer"></nav>
+    <script src="footer.js"></script>
+</body>
+
+</html>

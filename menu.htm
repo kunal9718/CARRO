@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Menu</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        nav li {
+            width: 20%;
+            height: 40px;
+            display: inline-block;
+           
+        }
+        nav  a {
+            text-decoration: none;
+        }
+
+
+        nav  ul  li {
+            text-align: center;
+        }
+
+        nav  ul  li  ul {
+            display: none;
+            position: absolute;
+            width: inherit;
+            margin-top: 10px;
+
+        }
+        nav ul li ul a {
+           padding-left: 50px;
+           
+       }
+
+        nav li:hover ul {
+            display: block;
+        }
+
+        nav li ul li {
+            display: block;
+            text-align: center;
+        }
+        
+
+        #menubar {
+            margin: 30px;
+            text-align: center;
+            font-size: x-large;
+            display: inline;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <nav class="header"></nav>
+    <script src="heading.js"></script>
+
+
+
+    <nav id="menubar">
+        <ul>
+            <li><a href="#">grocery</a></li>
+            <li><a href="#">grocery</a></li>
+            <li><a href="#">grocery</a></li>
+            <li>grocery</a>
+                <ul>
+                    <li><a href="#">appliances</a></li>
+                    <li><a href="#">grocery</a></li>
+                    <li><a href="#">grocery</a></li>
+                </ul>
+                
+            </li>
+        </ul>
+    </nav>
+    <nav class="footer"></nav>
+  <script src="footer.js"></script>
+</body>
+
+</html>

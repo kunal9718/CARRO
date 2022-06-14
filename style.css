@@ -1,0 +1,80 @@
+
+
+
+
+
+.items {
+    color: white;
+    text-align: center;
+    background-color: white;
+    font-size: larger;
+    width: 180px;
+    height: 250px;
+    margin-inline: 20px;
+    font-weight: bold;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    font-size: xx-large;
+}
+.item input,
+.items input[type="submit"] {
+    background-color: #4daea1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.items input[type="submit"]:hover {
+    background-color: #4caf84;
+}
+.electronic_items{
+    display: grid;
+    grid-gap: 1.5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+.items{
+    display: grid;
+    grid-gap: 1.5%;
+}
+.images{
+    max-width: 170px;
+    transition: transform 0.2s;
+}
+.images:hover{
+   
+    transform: scale(1.05);
+}
+.name {
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+    color: black;
+    overflow: hidden;
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.rate {
+    color: #212121;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+}
+.name:hover{
+    cursor: pointer;
+    color: #2874f0;
+}
+.slidesimg {
+    width: 100%;
+    height: 250px;
+  }
